@@ -33,8 +33,8 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-// int main (void)
-// {
-// 	char str[]= "Eu .tenho";
-// 	printf("Minha funcao: %s\n", ft_strchr(str,'.'));
-// }
+ int main (void)
+ {
+	char str[]= "Eu .tenho";
+ 	printf("Minha funcao: %s\n", ft_strchr(str,'.'));
+ }
