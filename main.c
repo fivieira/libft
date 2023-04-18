@@ -60,7 +60,7 @@ int	main(void)
 	dest = zero;
 	ft_bzero(zero,1);
 	printf("Minha funcao: %s\n", str);
-	bzero(zero,1);
+	//bzero(zero,1);
 	printf("Funcao original: %s\n", dest);
 
 	printf("**TESTE FT_MEMCPY:\n");
@@ -72,9 +72,9 @@ int	main(void)
 
 	dests1 = destes;
 	dests2 = destes;
-	ft_memcpy(destes,src,6);
+	ft_memcpy(destes,src,4);
 	printf("Minha funcao: %s\n", dests1);
-	memcpy(destes,src,6);
+	memcpy(destes,src,4);
 	printf("Funcao original: %s\n", dests2);
 
 	printf("**TESTE FT_MEMMOVE:\n");
