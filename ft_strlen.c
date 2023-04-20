@@ -6,7 +6,7 @@
 /*   By: fivieira <fivieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 16:10:48 by fivieira          #+#    #+#             */
-/*   Updated: 2023/04/14 17:06:44 by fivieira         ###   ########.fr       */
+/*   Updated: 2023/04/20 17:25:04 by fivieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *str)
 {
-	int	x;
+	int		x;
 	size_t	count;
 
 	x = 0;

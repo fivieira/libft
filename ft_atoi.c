@@ -6,7 +6,7 @@
 /*   By: fivieira <fivieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 15:51:53 by fivieira          #+#    #+#             */
-/*   Updated: 2023/04/20 16:22:26 by fivieira         ###   ########.fr       */
+/*   Updated: 2023/04/20 17:31:57 by fivieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,10 @@ int	ft_atoi(const char	*str)
 	}
 	return (res * sign);
 }
+
+// int main(void)
+// {
+// 	char str[]="dsa";
+
+// 	printf("teste atoi: %d\n",ft_atoi(str));
+// }

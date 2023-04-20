@@ -6,7 +6,7 @@
 /*   By: fivieira <fivieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 18:23:51 by fivieira          #+#    #+#             */
-/*   Updated: 2023/04/15 18:52:44 by fivieira         ###   ########.fr       */
+/*   Updated: 2023/04/20 17:26:57 by fivieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 char	*ft_strchr(const char *s, int c)
 {
 	int	i;
-	int	j;
 
 	i = 0;
 	while (s[i] != '\0')
@@ -33,8 +32,8 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
- int main (void)
- {
-	char str[]= "Eu .tenho";
- 	printf("Minha funcao: %s\n", ft_strchr(str,'.'));
- }
+//  int main (void)
+//  {
+// 	char str[]= "Eu .tenho";
+//  	printf("Minha funcao: %s\n", ft_strchr(str,'.'));
+//  }

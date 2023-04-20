@@ -6,20 +6,19 @@
 /*   By: fivieira <fivieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 15:52:01 by fivieira          #+#    #+#             */
-/*   Updated: 2023/04/20 15:53:40 by fivieira         ###   ########.fr       */
+/*   Updated: 2023/04/20 17:54:27 by fivieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char	*big, const char	*little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	little_len;
 	size_t	i;
 	size_t	j;
 
 	i = 0;
-	if (little_len == 0)
+	if (len == 0)
 	{
 		return ((char *)big);
 	}
