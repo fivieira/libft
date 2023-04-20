@@ -6,7 +6,7 @@
 /*   By: fivieira <fivieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 17:13:55 by fivieira          #+#    #+#             */
-/*   Updated: 2023/04/16 17:28:34 by fivieira         ###   ########.fr       */
+/*   Updated: 2023/04/20 15:35:40 by fivieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,12 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 
 // int	main (void)
 // {
-// 	char str1[]="tla";
+// 	char str1[]="Ola";
 // 	char str2[]="Ola";
 // 	int ret;
 // 	int ret2;
 
-// 	ret = ft_memcmp(str1,str2,3);
+// 	ret = ft_memcmp(str1,str2,2);
 // 	   if(ret < 0) {
 //       printf("str1 is less than str2\n");
 //    } else if(ret > 0) {
@@ -48,7 +48,7 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 //       printf("str1 is equal to str2\n");
 //    }
 
-//    	ret2 = memcmp(str1,str2,3);
+//    	ret2 = memcmp(str1,str2,2);
 // 	   if(ret2 < 0) {
 //       printf("str1 is less than str2\n");
 //    } else if(ret2 > 0) {
