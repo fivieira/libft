@@ -6,7 +6,7 @@
 /*   By: fivieira <fivieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 19:47:03 by fivieira          #+#    #+#             */
-/*   Updated: 2023/04/20 18:40:30 by fivieira         ###   ########.fr       */
+/*   Updated: 2023/04/21 14:53:14 by fivieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	size_t		i;
-
+	size_t			i;
 	unsigned char	*first;
 	unsigned char	*second;
-	
+
 	i = 0;
 	first = (unsigned char *)str1;
 	second = (unsigned char *)str2;

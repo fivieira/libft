@@ -6,7 +6,7 @@
 /*   By: fivieira <fivieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 18:57:09 by fivieira          #+#    #+#             */
-/*   Updated: 2023/04/15 19:10:52 by fivieira         ###   ########.fr       */
+/*   Updated: 2023/04/20 19:09:48 by fivieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,5 @@ char	*ft_strrchr(const char *s, int c)
 // int main (void)
 // {
 // 	char str[]= "e.u .tenho";
-// 	printf("Minha funcao: %s\n", ft_strrchr(str,'e'));
+// 	printf("Minha funcao: %s\n", ft_strrchr(str,'\0'));
 // }

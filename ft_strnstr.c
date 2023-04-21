@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fivieira <fivieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/20 15:52:01 by fivieira          #+#    #+#             */
-/*   Updated: 2023/04/20 17:54:27 by fivieira         ###   ########.fr       */
+/*   Created: 2023/04/21 11:39:32 by fivieira          #+#    #+#             */
+/*   Updated: 2023/04/21 12:13:48 by fivieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,25 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	i;
-	size_t	j;
+	size_t		little_len;
 
-	i = 0;
-	if (len == 0)
-	{
+	little_len = ft_strlen(little);
+	if (!little_len)
 		return ((char *)big);
-	}
-	while (big[i] != '\0' && i < len)
+	while (*big && little_len <= len--)
 	{
-		j = 0;
-		while (big[i + j] && little[j]
-			&& i + j < len && big[i + j] == little[j])
-			j++;
-		if (!little[j])
-			return ((char *)(big + i));
-		i++;
+		if (!ft_memcmp(big, little, little_len))
+			return ((char *)big);
+		big++;
 	}
 	return (NULL);
 }
 
 // int main(void)
 // {
-// 	char little[]="Esta";
-// 	char big[]= "Esta aqui";
+// 	char little[]="ipsum";
+// 	char big[]= "lorem ipsum dolor sit amet";
 
-// 	printf("Vamos testar vazio: %s\n", ft_strnstr(big, little,4));
+// 	printf("Vamos testar vazio: %s\n", ft_strnstr(big, little,15));
 
 // }
