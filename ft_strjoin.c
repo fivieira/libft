@@ -1,46 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fivieira <fivieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/21 17:23:36 by fivieira          #+#    #+#             */
-/*   Updated: 2023/04/22 14:33:09 by fivieira         ###   ########.fr       */
+/*   Created: 2023/04/22 14:36:25 by fivieira          #+#    #+#             */
+/*   Updated: 2023/04/22 15:51:25 by fivieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-	size_t	j;
-	char	*string;
+	int		i;
+	int		j;
+	char	*str;
 
 	i = 0;
 	j = 0;
-	if (s[i] == '\0')
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!str)
 		return (NULL);
-	string = (char *)malloc(sizeof(char) * (len + 1));
-	if (!string)
-		return (NULL);
-	while (s[i] != '\0')
+	while (s1[i] != '\0')
 	{
-		if (i >= start && j < len)
-		{
-			string[j] = s[i];
-			j++;
-		}
+		str[i] = s1[i];
 		i++;
 	}
-	string[j] = '\0';
-	return (string);
+	while (s2[j] != '\0')
+	{
+		str[i] = s2[j++];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
 
-// int main (void)
+// int	main(void)
 // {
-// 	char str[] = "Teste subtring";
+// 	char str1[] = "\0";
+// 	char str2[] = "dolor sit amet";
 
-// 	printf("A minha subString: %s\n",ft_substr(str, 2 ,0));
+// 	printf("Vamos juntar as duas: %s\n",ft_strjoin(str1, str2));
 // }

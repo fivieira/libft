@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fivieira <fivieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/15 14:33:27 by fivieira          #+#    #+#             */
-/*   Updated: 2023/04/22 15:14:56 by fivieira         ###   ########.fr       */
+/*   Created: 2023/04/22 16:03:31 by fivieira          #+#    #+#             */
+/*   Updated: 2023/04/22 17:03:18 by fivieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *str1, const void *str2, size_t	n)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	unsigned char	*mem;
-	unsigned char	*tocopy;
+    int		i;
+	int		j;
+	char	*str;
 
-	mem = (unsigned char *) str1;
-	tocopy = (unsigned char *) str2;
-	if (tocopy < mem)
-	{
-		while (n--)
-		{
-		mem[n] = tocopy[n];
-		}
-		return (mem);
-	}
-	ft_memcpy(mem, tocopy, n);
-	return (mem);
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) - ft_strlen(set) + 1));
+	i = 0;
+	j = 0;
+	
 }
