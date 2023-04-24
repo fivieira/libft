@@ -6,7 +6,7 @@
 /*   By: fivieira <fivieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 19:47:03 by fivieira          #+#    #+#             */
-/*   Updated: 2023/04/22 17:56:49 by fivieira         ###   ########.fr       */
+/*   Updated: 2023/04/24 15:05:14 by fivieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,19 +32,19 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 	return (0);
 }
 
-int	main (void)
-{
-	char str1[]="teste\2";
-	char str2[]="teste\0";
-	int ret;
+// int	main (void)
+// {
+// 	char str1[]="teste\2";
+// 	char str2[]="teste\0";
+// 	int ret;
 
-	ret = ft_strncmp(str1,str2,6);
-	   if(ret < 0) {
-      printf("str1 is less than str2\n");
-   } else if(ret > 0) {
-      printf("str2 is less than str1\n");
-   } else {
-      printf("str1 is equal to str2\n");
-   }
+// 	ret = ft_strncmp(str1,str2,6);
+// 	   if(ret < 0) {
+//       printf("str1 is less than str2\n");
+//    } else if(ret > 0) {
+//       printf("str2 is less than str1\n");
+//    } else {
+//       printf("str1 is equal to str2\n");
+//    }
 
-}
+// }

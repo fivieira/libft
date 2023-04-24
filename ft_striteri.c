@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fivieira <fivieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/22 16:03:31 by fivieira          #+#    #+#             */
-/*   Updated: 2023/04/24 15:15:17 by fivieira         ###   ########.fr       */
+/*   Created: 2023/04/24 17:43:32 by fivieira          #+#    #+#             */
+/*   Updated: 2023/04/24 18:20:07 by fivieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t	len;
+	unsigned int	i;
 
-	if (s1 == NULL || set == NULL)
-		return (NULL);
-	while (*s1 && ft_strchr(set, *s1))
+	i = 0;
+	if (s[i] == '\0')
+		return ;
+	while (s[i])
 	{
-		s1++;
+		f(i, &s[i]);
+		i++;
 	}
-	len = ft_strlen(s1);
-	while (len && ft_strchr(set, s1[len]))
-	{
-		len--;
-	}
-	return (ft_substr(s1, 0, len + 1));
 }
 
-int	 main(void)
-{
-	char str[] = "         ";
-	printf("Funcao trim: %s\n", ft_strtrim(str," "));
-	//printf("Funcao original trim: %s\n", strtrim(str," "));
-}
+// int	main(void)
+// {
+// 	char str[] = "";
+// 	printf("Teste: %s\n")
+// }

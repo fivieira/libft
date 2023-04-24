@@ -1,38 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fivieira <fivieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/22 16:03:31 by fivieira          #+#    #+#             */
-/*   Updated: 2023/04/24 15:15:17 by fivieira         ###   ########.fr       */
+/*   Created: 2023/04/24 16:24:22 by fivieira          #+#    #+#             */
+/*   Updated: 2023/04/24 17:34:15 by fivieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	len;
+	unsigned int	i;
+	char			*str;
 
-	if (s1 == NULL || set == NULL)
+	i = 0;
+	if (s[i] == '\0')
 		return (NULL);
-	while (*s1 && ft_strchr(set, *s1))
+	str = (char *) malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!str)
+		return (NULL);
+	while (s[i] != '\0')
 	{
-		s1++;
+		str[i] = f(i, s[i]);
+		i++;
 	}
-	len = ft_strlen(s1);
-	while (len && ft_strchr(set, s1[len]))
-	{
-		len--;
-	}
-	return (ft_substr(s1, 0, len + 1));
+	str[i] = '\0';
+	return (str);
 }
 
-int	 main(void)
-{
-	char str[] = "         ";
-	printf("Funcao trim: %s\n", ft_strtrim(str," "));
-	//printf("Funcao original trim: %s\n", strtrim(str," "));
-}
+// int	main(void)
+// {
+// 	char str[] = "teste";
+// 	printf("retorno da funcao: %s\n", ft_strmapi(str,"fsdfsdfsd"));
+// }
