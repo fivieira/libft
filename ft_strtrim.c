@@ -6,7 +6,7 @@
 /*   By: fivieira <fivieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 16:03:31 by fivieira          #+#    #+#             */
-/*   Updated: 2023/04/24 15:15:17 by fivieira         ###   ########.fr       */
+/*   Updated: 2023/04/27 10:45:48 by fivieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,25 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	len;
+	size_t	str_len;
+	size_t	start;
+	size_t	end;
 
 	if (s1 == NULL || set == NULL)
 		return (NULL);
-	while (*s1 && ft_strchr(set, *s1))
-	{
-		s1++;
-	}
-	len = ft_strlen(s1);
-	while (len && ft_strchr(set, s1[len]))
-	{
-		len--;
-	}
-	return (ft_substr(s1, 0, len + 1));
+	str_len = ft_strlen(s1) + 1;
+	start = 0;
+	while (s1[start] && ft_strchr(set, s1[start]))
+		start++;
+	end = str_len;
+	while (start < end && ft_strchr(set, s1[end - 1]))
+		end--;
+	return (ft_substr(s1, start, (end - start)));
 }
 
-int	 main(void)
-{
-	char str[] = "         ";
-	printf("Funcao trim: %s\n", ft_strtrim(str," "));
-	//printf("Funcao original trim: %s\n", strtrim(str," "));
-}
+// int	 main(void)
+// {
+// 	char str[] = "         ";
+// 	printf("Funcao trim: %s\n", ft_strtrim(str," "));
+// 	//printf("Funcao original trim: %s\n", strtrim(str," "));
+// }
