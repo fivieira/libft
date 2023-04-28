@@ -6,7 +6,7 @@
 /*   By: fivieira <fivieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 10:46:42 by fivieira          #+#    #+#             */
-/*   Updated: 2023/04/27 12:05:13 by fivieira         ###   ########.fr       */
+/*   Updated: 2023/04/28 09:43:51 by fivieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	count_words(const char *str, char c)
 {
-	int count;
-	int trigger;
+	int	count;
+	int	trigger;
 
 	count = 0;
 	trigger = 0;
@@ -48,12 +48,13 @@ static char	*word_dup(const char *str, int start, int finish)
 
 char	**ft_split(char const *s, char c)
 {
-    size_t	i;
+	size_t	i;
 	size_t	j;
 	int		index;
 	char	**split;
 
-	if (!s || !(split = malloc((count_words(s, c) + 1) * sizeof(char *))))
+	split = malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!s || !split)
 		return (0);
 	i = 0;
 	j = 0;
@@ -73,7 +74,7 @@ char	**ft_split(char const *s, char c)
 	return (split);
 }
 
-int main(void)
-{
+// int main(void)
+// {
 
-}
+// }

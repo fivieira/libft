@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fivieira <fivieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/28 09:53:05 by fivieira          #+#    #+#             */
-/*   Updated: 2023/04/28 10:28:21 by fivieira         ###   ########.fr       */
+/*   Created: 2023/04/28 11:22:36 by fivieira          #+#    #+#             */
+/*   Updated: 2023/04/28 12:04:37 by fivieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*list;
+    t_list *temp;
 
-	list = malloc(sizeof(t_list));
-	if (!list)
-		return (NULL);
-	list->content = content;
-	list->next = NULL;
-	return (list);
+	if (!*lst)
+	{
+		*lst = new;
+		return ;
+	}
+	temp = ft_lstlast(*lst);
+	temp->next = new;
 }
-
-// int	main(void)
-// {
-// 	char str[] = "Tenho isto tudo";
-
-// 	char *str1;
-// 	str1 = str;
-// 	printf("Funciona: %s\n", ft_lstnew(str));
-// }
