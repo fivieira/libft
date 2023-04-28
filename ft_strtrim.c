@@ -6,7 +6,7 @@
 /*   By: fivieira <fivieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 16:03:31 by fivieira          #+#    #+#             */
-/*   Updated: 2023/04/27 10:45:48 by fivieira         ###   ########.fr       */
+/*   Updated: 2023/04/28 15:59:55 by fivieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (s1 == NULL || set == NULL)
 		return (NULL);
+	if (!*s1 || !*set)
+		return (ft_strdup(s1));
 	str_len = ft_strlen(s1) + 1;
 	start = 0;
 	while (s1[start] && ft_strchr(set, s1[start]))
@@ -32,7 +34,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 // int	 main(void)
 // {
-// 	char str[] = "         ";
-// 	printf("Funcao trim: %s\n", ft_strtrim(str," "));
+// 	char str[] = "";
+// 	char str1[] = "";
+
+// 	printf("Funcao trim: %s\n", ft_strtrim(str,""));
+// 	printf("Comparacao: %d\n", ft_strncmp(str, str1, 1));
 // 	//printf("Funcao original trim: %s\n", strtrim(str," "));
 // }

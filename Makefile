@@ -6,7 +6,7 @@
 #    By: fivieira <fivieira@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/22 16:05:24 by fivieira          #+#    #+#              #
-#    Updated: 2023/04/28 12:20:49 by fivieira         ###   ########.fr        #
+#    Updated: 2023/04/28 15:47:09 by fivieira         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,14 +20,18 @@ ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c f
 ft_putnbr_fd.c
 
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c
+ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 BONUS_OBJS = ${BONUS:.c=.o}
 
 OBJS = ${SRC:.c=.o}
+
 INCLUDE = -I .
+
 CC = cc
+
 RM = rm -f
+
 CFLAGS = -Wall -Wextra -Werror
 .c.o:
 		${CC} ${CFLAGS} ${INCLUDE} -c $< -o ${<:.c=.o}

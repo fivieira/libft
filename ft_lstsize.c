@@ -6,7 +6,7 @@
 /*   By: fivieira <fivieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 10:47:43 by fivieira          #+#    #+#             */
-/*   Updated: 2023/04/28 10:58:40 by fivieira         ###   ########.fr       */
+/*   Updated: 2023/04/28 13:51:21 by fivieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_lstsize(t_list *lst)
 
 	count = 0;
 	temp = lst;
-	while (temp!= NULL)
+	while (temp != NULL)
 	{
 		temp = temp->next;
 		count++;
