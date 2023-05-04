@@ -6,7 +6,7 @@
 /*   By: fivieira <fivieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 17:23:36 by fivieira          #+#    #+#             */
-/*   Updated: 2023/04/22 14:33:09 by fivieira         ###   ########.fr       */
+/*   Updated: 2023/05/04 09:55:09 by fivieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,33 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	size_t	j;
-	char	*string;
+	char	*substr;
+	size_t	str_size;
 
-	i = 0;
-	j = 0;
-	if (s[i] == '\0')
+	if (!s)
 		return (NULL);
-	string = (char *)malloc(sizeof(char) * (len + 1));
-	if (!string)
-		return (NULL);
-	while (s[i] != '\0')
+	str_size = ft_strlen(s);
+	if (str_size < start)
 	{
-		if (i >= start && j < len)
-		{
-			string[j] = s[i];
-			j++;
-		}
-		i++;
+		substr = (char *)malloc(sizeof(char) * 1);
+		if (!substr)
+			return (NULL);
+		substr[0] = '\0';
+		return (substr);
 	}
-	string[j] = '\0';
-	return (string);
+	if (len > str_size - start)
+		len = str_size - start;
+	substr = (char *)malloc(sizeof(char) * (len + 1));
+	if (!substr)
+		return (NULL);
+	ft_memcpy(substr, s + start, len);
+	substr[len] = '\0';
+	return (substr);
 }
 
 // int main (void)
 // {
-// 	char str[] = "Teste subtring";
+// 	char str[] = "";
 
-// 	printf("A minha subString: %s\n",ft_substr(str, 2 ,0));
+// 	printf("A minha subString: %s\n",ft_substr(str, 0 ,1));
 // }

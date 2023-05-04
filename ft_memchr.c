@@ -6,7 +6,7 @@
 /*   By: fivieira <fivieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 16:40:35 by fivieira          #+#    #+#             */
-/*   Updated: 2023/04/28 15:32:16 by fivieira         ###   ########.fr       */
+/*   Updated: 2023/04/29 15:22:24 by fivieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	tosearch = (char *) str;
 	while (i < n)
 	{
-		if (tosearch[i] == c)
+		if ((unsigned char)tosearch[i] == (unsigned char)c)
 		{
 			return ((char *)(tosearch + i));
 		}

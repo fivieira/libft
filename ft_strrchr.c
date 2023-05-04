@@ -6,7 +6,7 @@
 /*   By: fivieira <fivieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 18:57:09 by fivieira          #+#    #+#             */
-/*   Updated: 2023/04/20 19:09:48 by fivieira         ###   ########.fr       */
+/*   Updated: 2023/04/29 15:45:53 by fivieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,18 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int			i;
-	int			j;
-	const char	*ends;
+	char	*last;
 
-	i = 0;
-	j = 0;
-	ends = s;
-	while (ends[i] != '\0')
+	last = NULL;
+	while (*s)
 	{
-		i++;
+		if (*(unsigned char *)s == (unsigned char)c)
+			last = ((char *)s);
+		s++;
 	}
-	while (ends[i] != s[j])
-	{
-		if (ends[i] == c)
-		{
-			return ((char *)(s + i));
-		}
-		i--;
-	}
-	if (ends[i] == c)
-	{
-		return ((char *)(s + i));
-	}
-	return (NULL);
+	if (*(unsigned char *)s == (unsigned char)c)
+		return ((char *)s);
+	return (last);
 }
 
 // int main (void)
